@@ -43,11 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restcountries_lbrary.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="restcountries_lbrary.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restcountries_lbrary.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34325746" vertical-offset="314" max-vertical-offset="930">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            <state vertical-scroll-proportion="-14.416667" vertical-offset="479" max-vertical-offset="1065">
+              <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grep.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grep.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4032258" vertical-offset="60" max-vertical-offset="2220">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -78,6 +88,7 @@
         <option value="$PROJECT_DIR$/arrays.html" />
         <option value="$PROJECT_DIR$/GLLBatch_18Class.html" />
         <option value="$PROJECT_DIR$/restcountries_lbrary.html" />
+        <option value="$PROJECT_DIR$/grep.html" />
       </list>
     </option>
   </component>
@@ -287,8 +298,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restcountries_lbrary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34325746" vertical-offset="314" max-vertical-offset="930">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state vertical-scroll-proportion="-14.416667" vertical-offset="479" max-vertical-offset="1065">
+          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grep.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4032258" vertical-offset="60" max-vertical-offset="2220">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>

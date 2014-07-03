@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        input[type="text"]{
+            width: 20em;
+            font: 300 1em 'HELVETICA NEUE';
+            outline: none;
+            background-color: #eee;
+            color: #555;
+            padding: 0.25em 0.5em;
+            border: none;
+        }
+        div#data, div{
+            width: 60%;
+            margin: 2em auto;
+        }
+
+    </style>
+    <script src="grep.js"></script>
+</head>
+<body>
+<div><input type="text" id="search"/></div>
+<div id="data">
+    Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression. Grep was originally developed for the Unix operating system, but is available today for all Unix-like systems. Its name comes from the ed command g/re/p (globally search a regular expression and print), which has the same effect: doing a global search with the regular expression and printing all matching lines.[1][2]
+
+    Contents  [hide]
+    1 History
+    2 Usage
+    3 Variations
+    4 Usage as a verb
+    5 See also
+    6 Notes
+    7 References
+    8 External links
+    History[edit]
+    Grep was created by Ken Thompson as a standalone application adapted from the regular expression parser he had written for ed (which he also created).[3] In ed, the command g/re/p would print all lines matching a previously defined pattern.[4][5] Grep first appeared in the man page for Unix Version 4 in 1973. [6]
+
+    Usage[edit]
+    Grep searches files specified as arguments, or, if missing, the program's standard input. By default, it reports matching lines on standard output, but specific modes of operation may be chosen with command line options.
+
+    A simple example of a common usage of grep is the following, which searches the file fruitlist.txt for lines containing the text string apple:
+
+    $ grep apple fruitlist.txt
+    Matches occur when the specific sequence of characters is recognized, for example, lines containing pineapple or apples are printed regardless of word boundaries. However, the search pattern specified as an argument is case sensitive by default, so this example's output does not include lines containing Apple (with a capital A) unless they also contain apple. Case-insensitive matching occurs when the argument option -i (ignore case) is given.
+
+    Multiple file names may be specified in the argument list. For example, all files having the extension .txt in a given directory may be searched if the shell supports globbing by using an asterisk as part of the filename:
+
+    $ grep apple *.txt
+    Regular expressions can be used to match more complicated text patterns. The following prints all lines in the file that begin with the letter a, followed by any one character, followed by the letter sequence ple.
+
+    $ grep ^a.ple fruitlist.txt
+    The name of grep derives from a usage in the Unix text editor ed and related programs. Before grep existed as a separate command, the same effect might have been achieved in an editor:
+
+    $ ed fruitlist.txt
+    g/^a.ple/p
+    q
+    where the second line is the command given to ed to print the relevant lines, and the third line is the command to exit from the editor.
+
+    Like most Unix commands, grep accepts options in the form of command-line arguments to change its behavior. For example, the option flag l (lower case L) provides a list of the files which have matching lines, rather than listing the lines explicitly.
+
+    Selecting all lines containing the self-standing word apple, i.e. surrounded by white space or hyphens, may be accomplished with the option flag w.
+
+    Exact line match is performed with the option flag x. Lines only containing exactly and solely apple are selected with a line-regexp instead of word-regexp:
+
+    $ cat fruitlist.txt
+    apple
+    apples
+    pineapple
+    apple-
+    apple-fruit
+    fruit-apple
+
+    $ grep -x apple fruitlist.txt
+    apple
+    The v option reverses the sense of the match and prints all lines that do not contain apple, as in this example.
+
+    $ grep -v apple fruitlist.txt
+    banana
+    pear
+    peach
+    orange
+    Variations[edit]
+
+    This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2010)
+    A variety of grep implementations are available in many operating systems and software development environments. Early variants included egrep and fgrep, introduced in Version 7 Unix. The "egrep" variant applies an extended regular expression syntax that was added to Unix after Ken Thompson's original regular expression implementation. The "fgrep" variant searches for any of a list of fixed strings using the Aho–Corasick string matching algorithm. These variants persist in most modern grep implementations as command-line switches (and standardized as -E and -F in POSIX[7]). In such combined implementations, grep may also behave differently depending on the name by which it is invoked, allowing fgrep, egrep, and grep to be links to the same program file.
+
+    Other commands contain the word "grep" to indicate that they search (usually for regular expression matches). The pgrep utility, for instance, displays the processes whose names match a given regular expression.
+
+    In the Perl programming language, grep is the name of the built-in function that finds elements in a list that satisfy a certain property. This higher-order function is typically named filter in functional programming languages.
+
+    The pcregrep command is an implementation of grep that uses Perl regular expression syntax. This functionality can be invoked in the GNU version of grep with the -P flag.[8]
+
+    Ports of grep (within Cygwin and GnuWin32, for example) also run under Microsoft Windows. Some versions of Windows feature the similar qgrep or Findstr command.[9]
+
+    Usage as a verb[edit]
+    In December 2003, the Oxford English Dictionary Online added draft entries for "grep" as both a noun and a verb.
+
+    A common verb usage is the phrase "You can't grep dead trees"—meaning one can more easily search through digital media, using tools such as grep, than one could with a hard copy (i.e., one made from dead trees, paper).[10] Compare with google.
+
+    See also[edit]
+    Portal icon	Free software portal
+    Boyer–Moore string search algorithm
+    List of Unix utilities
+    agrep
+    find
+    vgrep, or "visual grep"
+    FGREP (DOS command), an external command in some versions of MS-DOS 2.xx
+    Notes[edit]
+    Jump up ^ Hauben et al. 1997, Ch. 9
+    Jump up ^ Raymond, Eric. "grep". Jargon File. Retrieved 2006-06-29.
+    Jump up ^ Kernighan, Brian (1984). The Unix Programming Environment. Prentice Hall. p. 102. ISBN 0-13-937681-X.
+    Jump up ^ http://perl.plover.com/classes/HoldSpace/samples/slide012.html
+    Jump up ^ http://robots.thoughtbot.com/how-grep-got-its-name
+    Jump up ^ http://minnie.tuhs.org/cgi-bin/utree.pl?file=V4/man/man1/grep.1
+    Jump up ^ grep – Commands & Utilities Reference, The Single UNIX Specification, Issue 7 from The Open Group
+    Jump up ^ http://linux.die.net/man/1/grep
+    Jump up ^ Spalding, George (2000). Windows 2000 administration. Network professional's library. Osborne/McGraw-Hill. p. 634. ISBN 978-0-07-882582-8. Retrieved 2010-12-10. "QGREP.EXE[:] A similar tool to grep in UNIX, this tool can be used to search for a text string"
+    Jump up ^ Jargon File, article "Documentation"
+    References[edit]
+    Alain Magloire (August 2000). Grep: Searching for a Pattern. Iuniverse Inc. ISBN 0-595-10039-2.
+    Hume, Andrew A tale of two greps, Software—Practice and Experience 18, ( 11 ), 1063–1072 ( 1988).
+    Hume, Andrew Grep wars: The strategic search initiative. In Peter Collinson, editor, Proceedings of the EUUG Spring 88 Conference, pages 237–245, Buntingford, UK, 1988. European UNIX User Group.
+    Michael Hauben et al. (April 1997). Netizens: On the History and Impact of Usenet and the Internet (Perspectives). Wiley-IEEE Computer Society Press. ISBN 978-0-8186-7706-9.
+    External links[edit]
+    The Wikibook How To Search has a page on the topic of: grep
+    grep: search a file for a pattern – Commands & Utilities Reference, The Single UNIX® Specification, Issue 7 from The Open Group
+    GNU grep (german)
+    GNU grep
+    "why GNU grep is fast" - implementation details from GNU grep's author.
+    Network grep - A packet analyzer used to match patterns at the network layer
+</div>
+
+</body>
+</html>
