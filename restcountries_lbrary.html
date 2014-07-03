@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var rc = {
+            ajax: function (url, callback){
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', url);
+                xhr.onreadystatechange = function (){
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        callback(JSON.parse(xhr.responseText));
+                    }
+                };
+                xhr.send();
+            },
+            countryname: {
+                getCountry: function(country_name, callback) {
+                    var url = 'http://restcountries.eu/rest/v1/name/' + country_name;
+                    rc.ajax(url, function (data){
+                        callback(data);
+                    });
+                }
+            }
+        };
+
+        // --- call library
+
+        document.addEventListener('DOMContentLoaded', function (){
+            // make a call for 5 countries
+            var countries = ['norway', 'sweden', 'germany', 'france', 'united kingdom'];
+
+            rc.countryname.getCountry('norway', function(info){
+                console.log(info);
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

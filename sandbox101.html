@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function Restcountries(){
+
+        }
+
+        Restcountries.modules = {};
+        Restcountries.modules.ajax = function(user_library){
+            user_library.ajax = function(url, callback) {
+                // make ajax call
+                var data = {
+                    country_name: 'norway',
+                    population: 100000
+                };
+                callback(data);
+            }
+        };
+        Restcountries.addDeoendencies(user_library, arr_dependencies)
+        Restcountries.modules.allcountries = function (user_library){
+            // ['ajax', 'security']
+            var dependencies = ['ajax'];
+
+            user_library.getAllCountries = function (countryname){
+
+                this.ajax();
+            }
+        };
+
+        // --- library code ends --- user code begins
+
+        var my_library = Sandbox({}, ['restcountries', 'ajax', 'weather']);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
