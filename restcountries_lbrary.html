@@ -32,10 +32,21 @@
             // make a call for 5 countries
             var countries = ['norway', 'sweden', 'germany', 'france', 'united kingdom'];
 
-            rc.countryname.getCountry('norway', function(info){
-                console.log(info);
-            });
+            basic(countries);
+
         });
+
+        // basic function to make all calls asynchronously
+
+        function basic(arr_countries) {
+            // basic call for all countries
+            arr_countries.forEach(function(country){
+                rc.countryname.getCountry(country, function (data){
+                    console.log(data);
+                });
+            });
+        }
+
 
     </script>
 </head>
